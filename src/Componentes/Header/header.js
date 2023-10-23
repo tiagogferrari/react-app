@@ -5,18 +5,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
-    return <header>
-        <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-                <Navbar.Brand href="#home">MyAnimeList</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Animes</Nav.Link>
-                    <Nav.Link href="#features">Mangás</Nav.Link>
-                    <Nav.Link href="#pricing">Comunidade</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
-    </header>
+    return (
+        <header>
+            <Navbar id="navbar">
+                <Container>
+                    <Navbar.Brand href="#home">MyAnimeList</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">Animes</Nav.Link>
+                        <Nav.Link href="#features">Mangás</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </header>
+    )
 }
 
 export default Header
