@@ -11,10 +11,10 @@ export const SearchProvider = ({children}) => {
     const [animeunico, setAnimeUnico] = useState([])
   
     //Cria uma função para buscar dados na API
-    const search = async (searchText) => {
-      const response = await fetch(
-            `https://api.myanimelist.net/v2/anime?q=${searchText}&limit=4`);
-        return await response.json();
+    const search = (searchText) => {
+      return fetch(
+        `https://api.jikan.moe/v3/search/anime?q=${searchText}&limit=20`  
+      ).then((response) => response.json())
     }
 
     //Retorna o componente que faz com que o valor do contexto esteja disponível para os childrens
