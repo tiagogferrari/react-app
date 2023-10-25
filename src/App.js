@@ -13,7 +13,7 @@ function App() {
   if (pagina === 'animes') {
     conteudo = <Animes />
   } else if (pagina === 'home') {
-    conteudo = <Home />
+    conteudo = <Home onPageChange={setPagina} />
   } else if (pagina === 'busca') {
     conteudo = <Busca />
   }

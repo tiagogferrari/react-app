@@ -3,17 +3,16 @@ import './home.css';
 import { Form, Button, Container } from 'react-bootstrap';
 import { SearchContext } from "../Componentes/Search/search";
 
-const Home = () => {
+const Home = ({ onPageChange }) => {
     const busca = useContext(SearchContext);
     const [input, setInput] = useState('');
 
     const pesquisar = (event) => {
         event.preventDefault();
         busca.search(input).then((data) => {
-            console.log(data)
             busca.setInfo(data.data);
-            //localStorage.setItem('myData', JSON.stringify(data.results))
-            window.location.href = '/Busca';
+            localStorage.setItem('myInfo', JSON.stringify(data.data))
+            onPageChange('busca');
         })
 
     }
