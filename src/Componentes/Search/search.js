@@ -1,7 +1,5 @@
-//importa a função createContext e useState do pacote ‘react’
 import { createContext, useState } from "react";
 
-//Cria o contexto search
 export const SearchContext = createContext()
 
 //Cria um componente que aceita componentes filhos 
@@ -9,6 +7,14 @@ export const SearchProvider = ({ children }) => {
     //Cria dois estados e uma função para atualizar cada estado
     const [animesinfo, setInfoAnime] = useState([])
     const [animeselected, setAnimeselected] = useState([])
+
+    const setInfo = (data) => {
+        setInfoAnime(data)
+    }
+
+    const setSelected = (data) => {
+        setAnimeselected(data)
+    }
 
     //Cria uma função para buscar dados na API
     const search = async (searchText) => {
@@ -37,9 +43,9 @@ export const SearchProvider = ({ children }) => {
             value={{
                 search,
                 animesinfo,
-                setInfoAnime,
+                setInfo,
                 animeselected,
-                setAnimeselected,
+                setSelected,
             }}
         >
             {children}

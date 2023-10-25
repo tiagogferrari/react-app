@@ -1,39 +1,39 @@
-import React from "react";
-import { Container } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
+import React, { useContext, useState } from "react";
+import './home.css';
+import { Form, Button, Container } from 'react-bootstrap';
+import { SearchContext } from "../Componentes/Search/search";
 
 const Home = () => {
+    const busca = useContext(SearchContext);
+    const [input, setInput] = useState('');
+
+    const pesquisar = (event) => {
+        event.preventDefault();
+        busca.search(input).then((data) => {
+            console.log(data)
+            busca.setInfo(data.data);
+            //localStorage.setItem('myData', JSON.stringify(data.results))
+            window.location.href = '/Busca';
+        })
+
+    }
 
     return (
-        <Container fluid style={{
-            backgroundImage: `url("https://c.wallhere.com/photos/5f/7c/Son_Goku_Monkey_D_Luffy_Uzumaki_Naruto_Gon_Freecss_Dragneel_Natsu_Elric_Edward_Kurosaki_Ichigo_Toriko-1394185.jpg!d")`,
-            backgroundSize: 'cover',
-            height: '100vh',
-            width: '100%'
-        }}>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100vh'
-            }}>
-                <Form inline>
-                    <Row>
-                        <Col xs="auto">
-                            <Form.Control
-                                type="text"
-                                placeholder="Search"
-                                className=" mr-sm-2"
-                            />
-                        </Col>
-                        <Col xs="auto">
-                            <Button type="submit">Submit</Button>
-                        </Col>
-                    </Row>
+        <Container fluid className="home-container">
+            <div className="home-inner">
+                <Form className="home-form" onSubmit={pesquisar}>
+                    <Form.Group controlId="formBasicEmail">
+                        <Form.Control
+                            type="text"
+                            placeholder="Search for your favorite anime..."
+                            value={input}
+                            onChange={(event) => setInput(event.target.value)}
+                            className="home-input"
+                        />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" disabled={!input}>
+                        Search
+                    </Button>
                 </Form>
             </div>
         </Container>

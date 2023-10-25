@@ -1,0 +1,21 @@
+.home-container {
+    background-image: url("https://c.wallhere.com/photos/5f/7c/Son_Goku_Monkey_D_Luffy_Uzumaki_Naruto_Gon_Freecss_Dragneel_Natsu_Elric_Edward_Kurosaki_Ichigo_Toriko-1394185.jpg!d");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.home-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-form {
+    display: flex;
+}
+
+.home-input {
+    margin-right: 1rem;
+}
