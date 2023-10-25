@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Animes from './Pages/Animes';
-import Mangas from './Pages/Mangas';
 import Busca from './Pages/Busca';
 import Navegacao from './Componentes/Navegacao/navegacao';
 import { SearchProvider } from './Componentes/Search/search';
+import Home from './Pages/Home';
 
 function App() {
-  const [pagina, setPagina] = useState('animes')
+  const [pagina, setPagina] = useState('home')
   let conteudo
 
   if (pagina === 'animes') {
     conteudo = <Animes />
-  } else if (pagina === 'mangas') {
-    conteudo = <Mangas />
+  } else if (pagina === 'home') {
+    conteudo = <Home />
   } else if (pagina === 'busca') {
     conteudo = <Busca />
   }
