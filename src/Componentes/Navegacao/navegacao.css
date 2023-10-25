@@ -1,0 +1,11 @@
+.bg-body-tertiary {
+    background-color: #000000 !important; /* Define a cor de fundo como preto */
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
