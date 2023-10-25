@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { SearchContext } from "../Componentes/Search/search";
 
 const Animes = () => {
+  
+  const { search } = useContext(SearchContext)
+  useEffect(() => {
+    search('OnePiece').then((data) => {
+      console.log(data)
+    })
+  }, [search])
+  
   return(
-    <div>
-
-    </div>
+    <div>animes</div>
   )
 }
 

@@ -1,16 +1,31 @@
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Componentes/Header/header';
 import Animes from './Pages/Animes';
-/*
-import Content from './Componentes/Content/content';
-import Footer from './Componentes/Footer/footer';
-import { SearchContext, SearchProvider } from './Componentes/Search/search';
-*/
+import Mangas from './Pages/Mangas';
+import Busca from './Pages/Busca';
+import Navegacao from './Componentes/Navegacao/navegacao';
+import { SearchProvider } from './Componentes/Search/search';
+
 function App() {
+  const [pagina, setPagina] = useState('animes')
+  let conteudo
+
+  if (pagina === 'animes') {
+    conteudo = <Animes />
+  } else if (pagina === 'mangas') {
+    conteudo = <Mangas />
+  } else if (pagina === 'busca') {
+    conteudo = <Busca />
+  }
+
   return (
     <div>
-      <Header />
-      <Animes/>
+      <Navegacao onPageChange={setPagina} />
+      <main>
+        <SearchProvider>
+          {conteudo}
+        </SearchProvider>
+      </main>
     </div>
   )
 }
