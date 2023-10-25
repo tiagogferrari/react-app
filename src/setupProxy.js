@@ -4,8 +4,11 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://api.myanimelist.net/v2',
+      target: 'https://api.myanimelist.net',
       changeOrigin: true,
+      pathRewrite: {
+        '^/api': '/v2', // reescreve /api para /v2
+      },
     })
   );
 };

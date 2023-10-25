@@ -14,10 +14,10 @@ export const SearchProvider = ({ children }) => {
     const search = async (searchText) => {
         try {
             const response = await fetch(
-                `https://api.myanimelist.net/v2/anime?q=${searchText}&limit=4`,
+                `/api/anime?q=${searchText}`,
                 {
                     headers: {
-                        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhY2M3OTBiNTlmOWNkYWViZjc5MDA4MjZiMmFlN2JjNGZjODg1NGQwNjdjYjBiYjRmY2NiYjAzYjg4M2Y4OTAxYTI2Y2Y3OThkOGEyYTQzIn0.eyJhdWQiOiJkYzE2MjQxNWYxYzAxNDhjMzQxYjA1ZjU1MWQ4YjI2YiIsImp0aSI6IjNhY2M3OTBiNTlmOWNkYWViZjc5MDA4MjZiMmFlN2JjNGZjODg1NGQwNjdjYjBiYjRmY2NiYjAzYjg4M2Y4OTAxYTI2Y2Y3OThkOGEyYTQzIiwiaWF0IjoxNjk4MjAzODk3LCJuYmYiOjE2OTgyMDM4OTcsImV4cCI6MTcwMDg4NTg5Nywic3ViIjoiMTI1MzAyNTUiLCJzY29wZXMiOltdfQ.qWczHGIpebY_eLwppRg4A3x4zft0MWjv8ERletRolSeOttxhDAKDu-6vogs0cB_wMZlBig-PEjB99Gy5Pwdgdbvr_SJxAmG4LvIKgHCvg64pZineGMOW9njjwrq3BSVjoRRq20Icf2CH8FN6s8qpd8e2aIiQ4K1OVA89WSKx4QcRUNfbY4FQXthsk3bHmzctb7yPQXjJGrRGCYPXS7xVzOOst9zX0BderV2BL3XcwTNEMhAnxYaqpad_AW0r2j3rxXz0owydEy-BDMQHaGDRDeA-thI29eMub-d9auc2O-i-Vk9_8s9lbvWY3ffBf8CS-yn0fvlOcgjFmIpsgEQfJA'
+                        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJhNWEzMGU1N2FmNzFjNzA3NzZhMjVmN2Q5MzhhYTdmY2ZkYTAyYzdlNjdlZWM1NDY4MTM3NDczZDc1ZDQ0YTEzMjEwYTI2NTRjYzZmM2EwIn0.eyJhdWQiOiJkYzE2MjQxNWYxYzAxNDhjMzQxYjA1ZjU1MWQ4YjI2YiIsImp0aSI6IjJhNWEzMGU1N2FmNzFjNzA3NzZhMjVmN2Q5MzhhYTdmY2ZkYTAyYzdlNjdlZWM1NDY4MTM3NDczZDc1ZDQ0YTEzMjEwYTI2NTRjYzZmM2EwIiwiaWF0IjoxNjk4MjQwODA0LCJuYmYiOjE2OTgyNDA4MDQsImV4cCI6MTcwMDkyMjgwNCwic3ViIjoiMTI1MzAyNTUiLCJzY29wZXMiOltdfQ.X_HN9gg4GBRR8FX6asSLL4qqKm1QQ6reZMVXg2KVeX2bA38JvoJsh4gobBFgHZk57s_1kbS30Zr2BjvKendpCAOI1lvQmx-jeF1sCRkb6d2G59xoT_C_r-g7yR3dElqWJCb1fjQbPosP2m6bXy0xxuxRzXgH-t50c4PKl-1BGN5QTfBWBayu6N-LZiurxD2ATdWP_gXob7neC-wcD-O660-3epxxJcJXOGCxY1537ZiVIH7WxVEqYOq6wesCaWo3X7ul4j_AF8LMVKzh8V87FEbmOmWs0SqmYi5t3z-4lOEo10ViSyivo7CLCAPWd1fXEIxf2KttVy8GOH6duj9kiA'
                     }
                 }
             );

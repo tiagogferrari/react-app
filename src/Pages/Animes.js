@@ -2,10 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { SearchContext } from "../Componentes/Search/search";
 
 const Animes = () => {
-  
   const { search } = useContext(SearchContext)
   useEffect(() => {
-    search('OnePiece').then((data) => {
+    search('Naruto').then((data) => {
       console.log(data)
     })
   }, [search])
