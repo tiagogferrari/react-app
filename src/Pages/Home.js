@@ -4,14 +4,14 @@ import { Form, Button, Container } from 'react-bootstrap';
 import { SearchContext } from "../Componentes/Search/search";
 
 const Home = ({ onPageChange }) => {
-    const busca = useContext(SearchContext);
+    const search = useContext(SearchContext);
     const [input, setInput] = useState('');
 
     const pesquisar = (event) => {
         event.preventDefault();
-        busca.search(input).then((data) => {
-            busca.setInfo(data.data);
-            localStorage.setItem('myInfo', JSON.stringify(data.data))
+        search.search(input).then((data) => {
+            search.setInfo(data);
+            localStorage.setItem('myInfo', JSON.stringify(data))
             onPageChange('busca');
         })
 
@@ -20,7 +20,7 @@ const Home = ({ onPageChange }) => {
     return (
         <Container fluid className="home-container">
             <div className="home-inner">
-                <Form className="home-form" onSubmit={pesquisar}>
+                <Form className="home-form">
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control
                             type="text"
@@ -30,7 +30,7 @@ const Home = ({ onPageChange }) => {
                             className="home-input"
                         />
                     </Form.Group>
-                    <Button variant="primary" type="submit" disabled={!input}>
+                    <Button variant="primary" type="submit" disabled={!input} onClick={pesquisar}>
                         Search
                     </Button>
                 </Form>

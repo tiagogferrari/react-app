@@ -19,7 +19,7 @@ const Animes = () => {
         className="me-2"
         aria-label="Search"
       />
-      <Button variant="outline-success">Search</Button>
+      <Button variant="outline-success">Searchs</Button>
     </Form>
   )
 }

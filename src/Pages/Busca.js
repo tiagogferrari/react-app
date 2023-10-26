@@ -12,15 +12,15 @@ const Busca = () => {
         search.setInfo(JSON.parse(localStorage.getItem('myInfo')))
         setDataExiste(true)
       } catch (error) {
-        console.log (error)
+        console.log(error)
+        setDataExiste(false)
       }
     }
-    console.log(search.animesinfo)
-  }, [search])
+  }, [search]);
 
-  return(
+  return (
     <div>
-      {(dataExiste && <Lista data={search.animesinfo}/>) || 'Data não existe'}
+      {(dataExiste && <Lista data={search.animesinfo} />) || 'Data não existe'}
     </div>
   )
 }

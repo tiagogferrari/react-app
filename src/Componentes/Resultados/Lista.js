@@ -5,12 +5,13 @@ import Cartao from './Cartao';
 import { Col, Row } from 'react-bootstrap';
 
 const Lista = (props) => {
+    console.log(props.data)
     return (
         <div className='cardlist'>
             <Row xs={5} className="g-4">
-                {props.data.map((anime, idx) => (
+                {props.data.data.map((anime, idx) => (
                     <Col key={idx}>
-                        <Cartao key={anime.anime_id} anime={anime}/>
+                        <Cartao anime={anime.node} />
                     </Col>
                 ))}
             </Row>
