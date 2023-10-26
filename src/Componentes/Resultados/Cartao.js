@@ -20,7 +20,7 @@ const Cartao = ({ anime, onPageChange}) => {
             .then((response) => response.json())
             .then((data) => {
                 search.setSelected(data)
-                localStorage.setItem('animeselected', JSON.stringify(data))
+                localStorage.setItem('animesingle', JSON.stringify(data))
                 onPageChange('selecionado');
             })
     };
