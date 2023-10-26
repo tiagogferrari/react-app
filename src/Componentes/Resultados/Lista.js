@@ -4,14 +4,13 @@ import './lista.css';
 import Cartao from './Cartao';
 import { Col, Row } from 'react-bootstrap';
 
-const Lista = (props) => {
-    console.log(props.data)
+const Lista = ({ data, onPageChange }) => {
     return (
         <div className='cardlist'>
             <Row xs={5} className="g-4">
-                {props.data.data.map((anime, idx) => (
+                {data.data.map((anime, idx) => (
                     <Col key={idx}>
-                        <Cartao anime={anime.node} />
+                        <Cartao anime={anime.node} onPageChange={onPageChange}/>
                     </Col>
                 ))}
             </Row>

@@ -5,6 +5,7 @@ import Busca from './Pages/Busca';
 import Navegacao from './Componentes/Navegacao/navegacao';
 import { SearchProvider } from './Componentes/Search/search';
 import Home from './Pages/Home';
+import Selecionado from  './Pages/Selecionado';
 
 function App() {
   const [pagina, setPagina] = useState('home')
@@ -15,8 +16,10 @@ function App() {
   } else if (pagina === 'home') {
     conteudo = <Home onPageChange={setPagina} />
   } else if (pagina === 'busca') {
-    conteudo = <Busca />
-  } 
+    conteudo = <Busca onPageChange={setPagina} />
+  }  else if (pagina === 'selecionado') {
+    conteudo = <Selecionado onPageChange={setPagina}/>
+  }
 
   return (
     <div>
