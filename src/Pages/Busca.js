@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { SearchContext } from "../Componentes/Search/search";
+import Lista from "../Componentes/Resultados/Lista";
 
 const Busca = () => {
   const search = useContext(SearchContext)
@@ -12,7 +13,6 @@ const Busca = () => {
         setDataExiste(true)
       } catch (error) {
         console.log (error)
-        setDataExiste = (false)
       }
     }
     console.log(search.animesinfo)
@@ -20,7 +20,7 @@ const Busca = () => {
 
   return(
     <div>
-      {(dataExiste && 'Data existe') || 'Data não existe'}
+      {(dataExiste && <Lista data={search.animesinfo}/>) || 'Data não existe'}
     </div>
   )
 }

@@ -16,7 +16,7 @@ function App() {
     conteudo = <Home onPageChange={setPagina} />
   } else if (pagina === 'busca') {
     conteudo = <Busca />
-  }
+  } 
 
   return (
     <div>

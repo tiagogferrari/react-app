@@ -1,0 +1,30 @@
+.cardlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
+}
+
+.row {
+    column-count: 4;
+}
+
+.col {
+    padding: 0px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 80%;
+    height: 300px;
+    
+}
