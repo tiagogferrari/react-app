@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const Navegacao = ({ onPageChange }) => {
     return (
-        <div>
+        <div className="divNav">
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
                     <Navbar.Brand href="#" onClick={() => onPageChange('home')}>MyAnimeList</Navbar.Brand>
