@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import './navegacao.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 

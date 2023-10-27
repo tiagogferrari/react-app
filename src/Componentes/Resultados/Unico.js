@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
+import './unico.css';
+import { Container, Col, Image, Card, Button } from 'react-bootstrap';
 
 const Unico = ({ info }) => {
 
@@ -19,30 +20,28 @@ const Unico = ({ info }) => {
     const duracaoEp = (info.average_episode_duration / 60);
 
     return (
-        <Container className="singleanime__container d-flex justify-content-center">
-            <Row className="align-items-center">
-                <Col xs lg="2">
-                    <Image src={urlImagem} alt={titulo} className="singleanime__image" />
-                </Col>
-                <Col md="auto">
-                    <Card className="singleanime__description" style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>{titulo}</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">Nota: {nota}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Status: {status}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Classificação: {rating}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Ranking: {ranking}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Popularidade: #{popularidade}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Tipo: {tipo}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Episódios: {episodios}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Tipo: {source}</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Duração: {duracaoEp} min. por ep.</Card.Subtitle>
-                            <Card.Subtitle className="mb-2 text-muted">Genero: {generosString}</Card.Subtitle>
-                            <Button variant="primary">My Anime List</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+        <Container className="containerImg">
+            <Col xs lg="6" className="imgCol">
+                <Image src={urlImagem} alt={titulo} className="imgUnica" />
+            </Col>
+            <Col xs lg="6" className="containerInfo">
+                <Card className="descAnime" style={{ width: '100%', height: '100%' }}>
+                    <Card.Body className="cardBody">
+                        <Card.Title>{titulo}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">Nota: {nota}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Status: {status}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Classificação: {rating}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Ranking: {ranking}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Popularidade: #{popularidade}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Tipo: {tipo}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Episódios: {episodios}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Tipo: {source}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Duração: {duracaoEp} min. por ep.</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Genero: {generosString}</Card.Subtitle>
+                        <Button variant="primary">My Anime List</Button>
+                    </Card.Body>
+                </Card>
+            </Col>
         </Container>
     )
 }

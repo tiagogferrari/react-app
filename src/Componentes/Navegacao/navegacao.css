@@ -5,6 +5,10 @@
     z-index: 100;
 }
 
+.navbar {
+    height: 60px;
+}
+
 .bg-body-tertiary {
     background-color: #000000 !important; /* Define a cor de fundo como preto */
 }

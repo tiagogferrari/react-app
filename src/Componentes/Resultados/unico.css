@@ -1,0 +1,22 @@
+.imgCol {
+    margin-top: 0px;
+}
+
+.cardBody {
+    height: calc(100vh - 60px);
+}
+
+.containerInfo {
+    margin-top: 0px;
+}
+
+.containerImg {
+    height: calc(100vh - 60px);
+    margin: 0px;
+}
+
+
+.imgUnica {
+    height: calc(100vh - 60px); /* Ajuste a altura da imagem para se ajustar ao viewport */
+    border-radius: 10px;
+}

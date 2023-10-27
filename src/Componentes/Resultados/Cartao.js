@@ -4,7 +4,7 @@ import './cartao.css';
 import { SearchContext } from "../Search/search";
 import { Card, Button } from 'react-bootstrap';
 
-const Cartao = ({ anime, onPageChange}) => {
+const Cartao = ({ anime, onPageChange }) => {
     const search = useContext(SearchContext)
 
     const Clicado = (event) => {
@@ -27,7 +27,6 @@ const Cartao = ({ anime, onPageChange}) => {
 
     const titulo = anime.title;
     const urlImg = anime.main_picture.medium;
-    const sinopse = anime.synopsis;
 
     return (
         <div>
@@ -36,7 +35,7 @@ const Cartao = ({ anime, onPageChange}) => {
                 <Card.Body>
                     <Card.Title>{titulo}</Card.Title>
                     <Card.Text>
-                        {sinopse}
+                        
                     </Card.Text>
                     <Button variant="primary" onClick={Clicado}>
                         Ver mais</Button>
