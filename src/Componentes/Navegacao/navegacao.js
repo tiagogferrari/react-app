@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import './navegacao.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
-const Navegacao = ({onPageChange}) => {
+const Navegacao = ({ onPageChange }) => {
     return (
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
