@@ -4,15 +4,18 @@ import './lista.css';
 import Cartao from './Cartao';
 import { Col, Row, Pagination } from 'react-bootstrap';
 
-
 const Lista = ({ data, onPageChange }) => {
+    // Utilizando o hook useState para gerenciar a página atual
     const [pagAtual, setPagAtual] = useState(1);
     const [animesPorPag] = useState(10);
 
     const indiceUltimo = pagAtual * animesPorPag;
     const indicePrimeiro = indiceUltimo - animesPorPag;
+
+    // Obtendo os animes da página atual
     const animesAtual = data.data.slice(indicePrimeiro, indiceUltimo);
 
+    // Função para mudar a página atual
     const paginar = numPag => setPagAtual(numPag);
 
     const paginasTotal = Math.ceil(data.data.length / animesPorPag);

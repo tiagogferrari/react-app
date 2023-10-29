@@ -6,14 +6,19 @@ import { SearchContext } from "../Componentes/Search/search";
 
 
 const Home = ({ onPageChange }) => {
+    // Utilizando o contexto de busca
     const search = useContext(SearchContext);
+    // Criando um estado para o input de busca
     const [input, setInput] = useState('');
 
+    // Função para realizar a busca quando o formulário é submetido
     const pesquisar = (event) => {
         event.preventDefault();
+        // Verifica se o input tem pelo menos 3 caracteres
         if (input.length < 3) {
             alert('Insira um termo com pelo menos 3 caracteres.')
         } else {
+            // Realiza a busca e atualiza os estados animesinfo e animeselected com os resultados
             search.search(input).then((data) => {
                 if (data && data.data && data.data.length > 0) {
                     search.setInfo(data);
@@ -27,6 +32,7 @@ const Home = ({ onPageChange }) => {
 
     }
 
+    // Função para renderizar um tooltip
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
             Por favor, insira algo para pesquisar.

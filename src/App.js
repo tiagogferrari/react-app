@@ -7,9 +7,12 @@ import Home from './Pages/Home';
 import Selecionado from './Pages/Selecionado';
 
 function App() {
+  // Criando um estado para a página atual
   const [pagina, setPagina] = useState('home')
+  // Variável para armazenar o conteúdo da página atual
   let conteudo
 
+  // Verificando qual é a página atual e definindo o conteúdo correspondente
   if (pagina === 'home') {
     conteudo = <Home onPageChange={setPagina} />
   } else if (pagina === 'busca') {

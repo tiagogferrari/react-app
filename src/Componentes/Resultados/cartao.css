@@ -5,7 +5,7 @@
 .my-card {
     height: 480px;
     background-color: rgb(187, 127, 81);
-    border: 2px solid  rgb(51, 30, 11);
+    border: 2px solid rgb(51, 30, 11);
 }
 
 .my-card .card-body {
@@ -15,18 +15,18 @@
 }
 
 .my-card .card-title {
-    color:  rgb(51, 30, 11);
+    color: rgb(51, 30, 11);
 }
 
 .my-card .btn-primary {
-    border: 2px solid  rgb(51, 30, 11);
+    border: 2px solid rgb(51, 30, 11);
     background-color: rgb(131, 88, 56);
-    color:  rgb(42, 25, 10);
+    color: rgb(42, 25, 10);
     align-self: center;
 }
 
 .my-card .btn-primary:hover {
-    border: 2px solid  rgb(71, 50, 31);
+    border: 2px solid rgb(71, 50, 31);
     background-color: #603c2b;
-    color:  rgb(25, 14, 5);
+    color: rgb(25, 14, 5);
 }

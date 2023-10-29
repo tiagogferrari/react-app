@@ -8,6 +8,7 @@ export const SearchProvider = ({ children }) => {
     const [animesinfo, setInfoAnime] = useState([])
     const [animeselected, setAnimeselected] = useState([])
 
+    // Função para atualizar o estado animesinfo
     const setInfo = (data) => {
         setInfoAnime(data)
     }

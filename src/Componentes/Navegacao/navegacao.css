@@ -12,7 +12,7 @@
 }
 
 .bg-body-tertiary {
-    background: linear-gradient(to right, rgb(131, 88, 56), rgb(151, 108, 76)) !important; /* Define a cor de fundo como preto */
+    background: linear-gradient(to right, rgb(131, 88, 56), rgb(151, 108, 76)) !important;
 }
 
 .navbar-brand {
