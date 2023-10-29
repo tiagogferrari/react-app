@@ -1,3 +1,7 @@
+.animeList {
+    background: linear-gradient(to top, white, rgb(131, 88, 56), white);
+}
+
 .cardlist {
     display: flex;
     justify-content: center;
@@ -34,4 +38,21 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.paginationDiv .page-link {
+    color: rgb(51, 30, 11);
+    border-color: rgb(51, 30, 11);
+    background-color: rgb(187, 127, 81);
+}
+
+.paginationDiv .page-item.active .page-link {
+    color: rgb(187, 127, 81);
+    background-color: rgb(51, 30, 11);
+    border-color: rgb(51, 30, 11);
+}
+
+.paginationDiv .page-item.disabled .page-link {
+    color: rgba(51, 30, 11, 0.5);
+    background-color: rgb(207, 147, 101);
 }

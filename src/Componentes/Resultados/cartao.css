@@ -1,3 +1,32 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .my-card {
-    height: 500px;
+    height: 480px;
+    background-color: rgb(187, 127, 81);
+    border: 2px solid  rgb(51, 30, 11);
+}
+
+.my-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-card .card-title {
+    color:  rgb(51, 30, 11);
+}
+
+.my-card .btn-primary {
+    border: 2px solid  rgb(51, 30, 11);
+    background-color: rgb(131, 88, 56);
+    color:  rgb(42, 25, 10);
+    align-self: center;
+}
+
+.my-card .btn-primary:hover {
+    border: 2px solid  rgb(71, 50, 31);
+    background-color: #603c2b;
+    color:  rgb(25, 14, 5);
 }

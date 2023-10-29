@@ -11,11 +11,19 @@ const Home = ({ onPageChange }) => {
 
     const pesquisar = (event) => {
         event.preventDefault();
-        search.search(input).then((data) => {
-            search.setInfo(data);
-            localStorage.setItem('myInfo', JSON.stringify(data))
-            onPageChange('busca');
-        })
+        if (input.length < 3) {
+            alert('Insira um termo com pelo menos 3 caracteres.')
+        } else {
+            search.search(input).then((data) => {
+                if (data && data.data && data.data.length > 0) {
+                    search.setInfo(data);
+                    localStorage.setItem('myInfo', JSON.stringify(data))
+                    onPageChange('busca');
+                } else {
+                    alert('Sua pesquisa não retornou nenhum resultado. Por favor, tente novamente com um termo de pesquisa diferente.');
+                }
+            })
+        }
 
     }
 
@@ -52,7 +60,7 @@ const Home = ({ onPageChange }) => {
                             </span>
                         </OverlayTrigger>
                     ) : (
-                        <Button variant="primary" type="submit"  className="searchButton" disabled={!input} onClick={pesquisar}>
+                        <Button variant="primary" type="submit" className="searchButton" disabled={!input} onClick={pesquisar}>
                             Buscar
                         </Button>
                     )}

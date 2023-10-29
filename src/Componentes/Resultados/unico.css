@@ -1,6 +1,25 @@
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(51, 30, 11) rgb(151, 108, 76);
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(131, 88, 56);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(151, 108, 76);
+    border-radius: 20px;
+    border: 3px solid rgb(51, 30, 11);
+}
+
 .containerAnime {
     height: calc(100vh - 60px);
-    margin: 60px 0px 0px 0px 
+    margin: 60px 0px 0px 100px;
 }
 
 .imgCol {
@@ -9,13 +28,47 @@
 
 .infoCol {
     margin-top: 0px;
+    width: 850px;
 }
 
 .cardBody {
     height: calc(100vh - 60px);
+    background-color: rgb(151, 108, 76);
+    border-radius: 3px;
+}
+
+.card-title {
+    color: black;
+}
+
+#card-subtitle {
+    color: rgb(0, 0, 0) !important;
+}
+
+.cardBody .card-text {
+    color: rgb(51, 30, 11);
 }
 
 .imgUnica {
     height: calc(100vh - 60px);
     border-radius: 10px;
+    width: 439px;
+}
+
+.descAnime {
+    border: 2px solid rgb(51, 30, 11);
+}
+
+.botaoVoltar {
+    margin-top: 8px;
+    border: 2px solid rgb(51, 30, 11);
+    background-color: rgb(131, 88, 56);
+    color: rgb(42, 25, 10);
+    align-self: center;
+}
+
+.botaoVoltar:hover {
+    border: 2px solid rgb(71, 50, 31);
+    background-color: #603c2b;
+    color: rgb(25, 14, 5);
 }

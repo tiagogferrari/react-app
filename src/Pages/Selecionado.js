@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { SearchContext } from '../Componentes/Search/search';
 import Unico from "../Componentes/Resultados/Unico";
 
-const Selecionado = () => {
+const Selecionado = ({ onPageChange }) => {
     const search = useContext(SearchContext)
     const [dataExiste, setDataExiste] = useState(true)
 
@@ -22,7 +22,7 @@ const Selecionado = () => {
 
     return (
         <div>
-            {(dataExiste && <Unico info={search.animeselected} />) || (
+            {(dataExiste && <Unico info={search.animeselected} onPageChange={onPageChange} />) || (
                 <p>Não existe dados</p>
             )}
         </div>

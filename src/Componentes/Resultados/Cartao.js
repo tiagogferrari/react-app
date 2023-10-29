@@ -25,17 +25,18 @@ const Cartao = ({ anime, onPageChange }) => {
             })
     };
 
-    const titulo = anime.title;
+    const titulo = anime.title.length > 49
+        ? `${anime.title.substring(0, 48)}...`
+        : anime.title;
     const urlImg = anime.main_picture.medium;
 
     return (
-        <div>
+        <div className="divCards">
             <Card className="my-card">
                 <Card.Img variant="top" src={urlImg} alt={titulo} style={{ maxHeight: 300 }} />
                 <Card.Body>
                     <Card.Title>{titulo}</Card.Title>
                     <Card.Text>
-                        
                     </Card.Text>
                     <Button variant="primary" onClick={Clicado}>
                         Ver mais</Button>
