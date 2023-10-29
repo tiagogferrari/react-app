@@ -3,20 +3,22 @@
     top: 0;
     width: 100%;
     z-index: 100;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
     height: 60px;
+    border-bottom: 3px solid rgb(51, 30, 11);
 }
 
 .bg-body-tertiary {
-    background-color: #000000 !important; /* Define a cor de fundo como preto */
+    background: linear-gradient(to right, rgb(131, 88, 56), rgb(151, 108, 76)) !important; /* Define a cor de fundo como preto */
 }
 
 .navbar-brand {
-    color: #ffffff !important;
+    color: rgb(51, 30, 11) !important;
 }
 
 .nav-link {
-    color: #ffffff !important;
+    color: rgb(51, 30, 11) !important;
 }

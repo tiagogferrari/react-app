@@ -17,7 +17,7 @@ const Lista = ({ data, onPageChange }) => {
     const paginasTotal = Math.ceil(data.data.length / animesPorPag);
 
     return (
-        <div>
+        <div className="animeList">
             <div className='cardlist'>
                 <Row xs={5} className="g-4">
                     {animesAtual.map((anime, idx) => (

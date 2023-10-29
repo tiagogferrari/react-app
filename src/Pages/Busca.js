@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { SearchContext } from "../Componentes/Search/search";
 import Lista from "../Componentes/Resultados/Lista";
+import './busca.css';
 
 const Busca = ({ onPageChange }) => {
   const search = useContext(SearchContext)
@@ -19,7 +20,7 @@ const Busca = ({ onPageChange }) => {
   }, [search]);
 
   return (
-    <div>
+    <div className="list">
       {(dataExiste && <Lista data={search.animesinfo} onPageChange={onPageChange} />) || 'Data não existe'}
     </div>
   )

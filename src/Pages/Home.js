@@ -1,7 +1,9 @@
 import React, { useContext, useState } from "react";
 import './home.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, Container, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { SearchContext } from "../Componentes/Search/search";
+
 
 const Home = ({ onPageChange }) => {
     const search = useContext(SearchContext);
@@ -26,14 +28,15 @@ const Home = ({ onPageChange }) => {
     return (
         <Container fluid className="home-container">
             <div className="home-inner">
-                <Form className="home-form">
+                <Form className="home-form" id="myForm">
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control
                             type="text"
-                            placeholder="Search for your favorite anime..."
+                            placeholder="Pesquise seus animes favoritos..."
                             value={input}
                             onChange={(event) => setInput(event.target.value)}
                             className="home-input"
+                            autoComplete="off"
                         />
                     </Form.Group>
                     {!input ? (
@@ -43,14 +46,14 @@ const Home = ({ onPageChange }) => {
                             overlay={renderTooltip}
                         >
                             <span className="d-inline-block">
-                                <Button variant="primary" type="submit" disabled={!input} onClick={pesquisar} style={{ pointerEvents: !input ? 'none' : 'auto' }}>
-                                    Search
+                                <Button variant="primary" className="searchButton" type="submit" disabled={!input} onClick={pesquisar} style={{ pointerEvents: !input ? 'none' : 'auto' }}>
+                                    Buscar
                                 </Button>
                             </span>
                         </OverlayTrigger>
                     ) : (
-                        <Button variant="primary" type="submit" disabled={!input} onClick={pesquisar}>
-                            Search
+                        <Button variant="primary" type="submit"  className="searchButton" disabled={!input} onClick={pesquisar}>
+                            Buscar
                         </Button>
                     )}
                 </Form>

@@ -1,15 +1,17 @@
 .home-container {
-    background-image: url("https://c.wallhere.com/photos/5f/7c/Son_Goku_Monkey_D_Luffy_Uzumaki_Naruto_Gon_Freecss_Dragneel_Natsu_Elric_Edward_Kurosaki_Ichigo_Toriko-1394185.jpg!d");
+    background-image: url("https://images4.alphacoders.com/110/1103448.png");
     background-size: cover;
     height: 100vh;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .home-inner {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
+    margin-left: 270px;
 }
 
 .home-form {
@@ -17,5 +19,45 @@
 }
 
 .home-input {
+    color: #513122 !important;
     margin-right: 1rem;
+    border-radius: 50px;
+    width: 500px;
+    background-color: rgb(187, 127, 81) !important;
+    border: 2px solid rgb(93, 60, 32) !important;
+}
+
+.home-input::placeholder {
+    color: #513122;
+    opacity: 0.8;
+}
+
+.searchButton {
+    color: #513122;
+    background-color: rgb(187, 127, 81);
+    width: 150px;
+    border-radius: 50px;
+    border: 2px solid rgb(93, 60, 32);
+
+}
+
+.searchButton:hover {
+    border: 2px solid #513122;
+    background-color: rgb(197, 137, 91) ;
+    color: rgb(82, 52, 36);
+}
+
+.searchButton:disabled {
+    color: #513122;
+    background-color: rgb(177, 117, 71);
+    width: 150px;
+    border-radius: 50px;
+    border: 2px solid rgb(61, 37, 15);
+}
+
+.tooltip-inner {
+    background-color: rgb(141, 98, 66);
+    color: #3a2217;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #3a2217;
 }
