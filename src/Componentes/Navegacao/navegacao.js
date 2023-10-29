@@ -15,7 +15,6 @@ const Navegacao = ({ onPageChange }) => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link onClick={() => onPageChange('animes')}>Animes</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -4,6 +4,7 @@ import './lista.css';
 import Cartao from './Cartao';
 import { Col, Row, Pagination } from 'react-bootstrap';
 
+
 const Lista = ({ data, onPageChange }) => {
     const [pagAtual, setPagAtual] = useState(1);
     const [animesPorPag] = useState(10);
@@ -29,8 +30,8 @@ const Lista = ({ data, onPageChange }) => {
             </div>
             <div className="paginationDiv">
                 <Pagination>
-                    <Pagination.First onClick={() => paginar(1)}  disabled={pagAtual === 1} />
-                    <Pagination.Prev onClick={() => paginar(pagAtual - 1)}  disabled={pagAtual === 1} />
+                    <Pagination.First onClick={() => paginar(1)} disabled={pagAtual === 1} />
+                    <Pagination.Prev onClick={() => paginar(pagAtual - 1)} disabled={pagAtual === 1} />
                     {Array(Math.ceil(data.data.length / animesPorPag)).fill().map((_, idx) => (
                         <Pagination.Item key={idx} active={idx + 1 === pagAtual} onClick={() => paginar(idx + 1)}>
                             {idx + 1}
