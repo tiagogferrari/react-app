@@ -39,7 +39,7 @@ const Cartao = ({ anime, onPageChange }) => {
     return (
         <div className="divCards">
             <Card className="my-card">
-                <Card.Img variant="top" src={urlImg} alt={titulo} style={{ maxHeight: 300 }} />
+                <Card.Img variant="top" className="imgCard" src={urlImg} alt={titulo} style={{ maxHeight: 300 }} />
                 <Card.Body>
                     <Card.Title>{titulo}</Card.Title>
                     <Card.Text>

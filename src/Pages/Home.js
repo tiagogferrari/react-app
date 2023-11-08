@@ -15,19 +15,17 @@ const Home = ({ onPageChange }) => {
     const pesquisar = (event) => {
         event.preventDefault();
         // Verifica se o input tem pelo menos 3 caracteres
-        if (input.length < 3) {
-            alert('Insira um termo com pelo menos 3 caracteres.')
-        } else {
+        if (input.length > 3) {
             // Realiza a busca e atualiza os estados animesinfo e animeselected com os resultados
             search.search(input).then((data) => {
                 if (data && data.data && data.data.length > 0) {
                     search.setInfo(data);
                     localStorage.setItem('myInfo', JSON.stringify(data))
                     onPageChange('busca');
-                } else {
-                    alert('Sua pesquisa não retornou nenhum resultado. Por favor, tente novamente com um termo de pesquisa diferente.');
                 }
             })
+        } else {
+            setInput(''); // Se o texto inserido for menor que 3 caracteres, o campo de entrada é limpo
         }
 
     }
@@ -46,7 +44,7 @@ const Home = ({ onPageChange }) => {
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control
                             type="text"
-                            placeholder="Pesquise seus animes favoritos..."
+                            placeholder="Pesquise seus animes favoritos... (mínimo 3 caracteres)"
                             value={input}
                             onChange={(event) => setInput(event.target.value)}
                             className="home-input"
